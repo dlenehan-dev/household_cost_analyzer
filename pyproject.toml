@@ -10,3 +10,7 @@ dependencies = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+[project.scripts]
+household-cost-analyzer="household_cost_analyzer.main:main"
+[tool.setuptools.packages.find]
+include = ["household_cost_analyzer"]
