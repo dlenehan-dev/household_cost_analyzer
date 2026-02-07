@@ -2,6 +2,8 @@ import argparse
 import logging 
 from pathlib import Path
 
+from household_cost_analyzer.config import load_config 
+
 from household_cost_analyzer.loader import load_expenses_from_csv
 from household_cost_analyzer.processor import (
     total_spend,
@@ -13,9 +15,25 @@ from household_cost_analyzer.reporter import (
     report_grouped_spend,
 )
 
+
+config = load_config()
+
+logging_config = config.get("logging", {})
+
+log_level = logging_config.get("level", "INFO")
+log_file = logging_config.get("file", "household_cost_analyzer.log")
+file_log_level = logging_config.get("file_level", "WARNING")
+
+console_handler = logging.StreamHandler()
+console_handler.setLevel(log_level)
+
+file_handler = logging.FileHandler(log_file, encoding="utf-8")
+file_handler.setLevel(file_log_level)
+
 logging.basicConfig(
-    level=logging.INFO,
+    level=log_level,
     format="%(levelname)s: %(message)s",
+    handlers=[console_handler, file_handler],
 )
 
 

@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: household-cost-analyzer
+Version: 0.1.0
+Summary: Household cost analysis and reporting tool
+Requires-Python: >=3.11
+Requires-Dist: pytest

@@ -1,0 +1,2 @@
+[console_scripts]
+household-cost-analyzer = household_cost_analyzer.main:main

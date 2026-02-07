@@ -1,0 +1,8 @@
+[logging]
+level = "INFO"
+file = "household_cost_analyzer.log"
+file_level = "WARNING"
+
+[reporting]
+currency_symbol = "£"
+DEFAULT_CONFIG_PATH = Path("config.toml")

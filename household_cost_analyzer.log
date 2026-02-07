@@ -1,0 +1,2 @@
+WARNING: Line 2: invalid data format (time data '2025-13-01' does not match format '%Y-%m-%d'): {'date': '2025-13-01', 'category': 'Food', 'description': 'Lunch', 'amount': 'ten'}
+WARNING: No valid expenses found.
