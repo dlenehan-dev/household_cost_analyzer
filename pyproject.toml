@@ -4,9 +4,6 @@ version = "0.1.0"
 description = "Household cost analysis and reporting tool"
 requires-python = ">=3.11"
 
-dependencies = [
-    "pytest",
-]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -14,3 +11,7 @@ testpaths = ["tests"]
 household-cost-analyzer="household_cost_analyzer.main:main"
 [tool.setuptools.packages.find]
 include = ["household_cost_analyzer"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
