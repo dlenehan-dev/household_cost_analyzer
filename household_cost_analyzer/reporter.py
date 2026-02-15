@@ -2,7 +2,7 @@
 Reporting utilities for the Household Cost Analyzer.
 """
 
-def report_total_spend(,currency_symbol="£"):
+def report_total_spend(total,currency_symbol="£"):
     return f"Total spend: {currency_symbol}{total:.2f}"
 
 
