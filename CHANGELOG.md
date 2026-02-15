@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on Keep a Changelog.
 This project follows semantic versioning.
 
+[Unreleased]:
+### Added
+- CLI option `--month` to filter expenses by YYYY-MM
+
+
 ## [0.2.0] – 2026-02-15
 ### Added
 - CLI option `--category` to filter expenses by category
