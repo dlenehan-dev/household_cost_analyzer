@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 ---
+## [Unreleased]
+
 
 ## [0.1.0] – 2026-02-07
 
@@ -16,3 +18,11 @@ All notable changes to this project will be documented in this file.
 - Project packaging with pyproject.toml
 - README with usage and installation instructions
 
+
+## [0.1.1] – 2026-02-07
+### Added
+- CHANGELOG.md
+
+### Changed
+- Improved .gitignore to exclude build artifacts and logs
+- Minor documentation polish
