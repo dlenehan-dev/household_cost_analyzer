@@ -1,16 +1,23 @@
+# household_cost_analyzer/config.py
+
+from dataclasses import dataclass
 from pathlib import Path
 import tomllib
-
 
 DEFAULT_CONFIG_PATH = Path("config.toml")
 
 
-def load_config(path: Path = DEFAULT_CONFIG_PATH) -> dict:
-    """
-    Load application configuration from a TOML file.
-    """
-    if not path.exists():
-        return {}
+@dataclass(frozen=True)
+class Config:
+    logging: dict
+    currency_symbol: str
 
-    with path.open("rb") as config_file:
-        return tomllib.load(config_file)
+
+def load_config(path: Path = DEFAULT_CONFIG_PATH) -> Config:
+    with path.open("rb") as f:
+        data = tomllib.load(f)
+
+    return Config(
+        logging=data["logging"],
+        currency_symbol=data["reporting"]["currency_symbol"],
+    )

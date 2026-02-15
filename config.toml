@@ -5,4 +5,3 @@ file_level = "WARNING"
 
 [reporting]
 currency_symbol = "£"
-DEFAULT_CONFIG_PATH = Path("config.toml")
