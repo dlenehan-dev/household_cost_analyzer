@@ -2,22 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
----
-## [Unreleased]
+The format is based on Keep a Changelog.
+This project follows semantic versioning.
 
-
-## [0.1.0] – 2026-02-07
-
+## [0.2.0] – 2026-02-15
 ### Added
-- Initial command-line interface for household cost analysis
-- CSV-based expense ingestion with validation
-- Spend aggregation by category and by month
-- Configurable logging using a TOML configuration file
-- Formatted reporting output
-- Automated test suite using pytest
-- Project packaging with pyproject.toml
-- README with usage and installation instructions
-
+- CLI option `--category` to filter expenses by category
+- Unit test for category filtering
 
 ## [0.1.1] – 2026-02-07
 ### Added
@@ -26,3 +17,11 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Improved .gitignore to exclude build artifacts and logs
 - Minor documentation polish
+
+## [0.1.0] – 2026-02-01
+### Added
+- Initial household cost analyzer implementation
+- CSV loading and validation
+- Expense aggregation by category and month
+- Command-line interface
+- Pytest test suite
