@@ -17,3 +17,11 @@ __pycache__/
 .DS_Store
 Thumbs.db
 data/expenses.csv
+*.egg-info/
+
+# Logs
+*.log
+
+# Build artifacts
+dist/
+build/
