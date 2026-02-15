@@ -25,3 +25,5 @@ data/expenses.csv
 # Build artifacts
 dist/
 build/
+
+data/*.csv
