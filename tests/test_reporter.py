@@ -1,20 +1,23 @@
-from household_cost_analyzer.reporter import (
-    report_total_spend,
-    report_grouped_spend,
-)
-
-def test_report_total_spend():
-    result = report_total_spend(123.456)
-    assert result == "Total spend: £123.46"
+from household_cost_analyzer.reporter import report_total_spend, report_grouped_spend
 
 
-def test_report_grouped_spend():
+def test_report_total_spend(capsys):
+    report_total_spend(123.456)
+
+    captured = capsys.readouterr()
+
+    assert captured.out.strip() == "Total spend: £123.46"
+
+
+def test_report_grouped_spend(capsys):
     data = {
         "Food": 25.0,
         "Utilities": 30.0,
     }
 
-    result = report_grouped_spend("Spend by category", data)
+    report_grouped_spend("Spend by category", data)
+
+    captured = capsys.readouterr()
 
     expected = (
         "Spend by category\n"
@@ -22,4 +25,4 @@ def test_report_grouped_spend():
         "- Utilities: £30.00"
     )
 
-    assert result == expected
+    assert captured.out.strip() == expected
